@@ -13,7 +13,7 @@ step(numerator, denominator);       % step response of dynamic system
                                     % uk.mathworks.com/help/control/ref/step.html
                                     
 impulse(numerator, denominator);    % impulse response of dynamic system
-                                    % more about setp function on
+                                    % more about impulse function on
                                     % uk.mathworks.com/help/control/ref/impulse.html
                                     
 % we can also create real- or romplex-valued transfer function model 
