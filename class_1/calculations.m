@@ -8,11 +8,11 @@ data;
 numerator = [0 0 1];
 denominator = [massConst damperConst springConst];
 
-step(numerator, denominator);       % step response of dynamic system
+% step(numerator, denominator);       % step response of dynamic system
                                     % more about setp function on
                                     % uk.mathworks.com/help/control/ref/step.html
                                     
-impulse(numerator, denominator);    % impulse response of dynamic system
+% impulse(numerator, denominator);    % impulse response of dynamic system
                                     % more about impulse function on
                                     % uk.mathworks.com/help/control/ref/impulse.html
                                     
@@ -22,7 +22,7 @@ impulse(numerator, denominator);    % impulse response of dynamic system
 object = tf(numerator, denominator);
 
 step(object);
-impulse(object);
+% impulse(object);
 
 % we can show object properties using get function
 get(object);
@@ -33,7 +33,7 @@ get(object);
 % SIMO continuous-time system in polynomial transfer function form we can
 % use output of tf2zp to produce the single-input, multi-output (SIMO)
 % factored transfer function form.
-fvtool(numerator, denominator, 'polezero'); % opens FVTool and displays the 
+% fvtool(numerator, denominator, 'polezero'); % opens FVTool and displays the 
                             % magnitude response of the digital filter defined
                             % with numerator and denominator. 
                             % More about this function on 
@@ -81,7 +81,7 @@ xi = damperConst / (2 * sqrt(springConst * massConst));
 % zeros =
 % 
 %    Empty matrix: 0-by-1
-%   
+  
 % so system doesn't have zeros in right half-plane 
 % thus system is not minimal-phase
 
@@ -108,5 +108,6 @@ forceConstAttenulated = forceConst;
 numeratorAtt = [0 0 1];
 denominatorAtt = [massConstAttenulated damperConstAttenulated springConstAttenulated];
 
-% step(numeratorAtt, denominatorAtt);
+figure;
+step(numeratorAtt, denominatorAtt);
 
