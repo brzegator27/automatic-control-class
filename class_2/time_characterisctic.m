@@ -76,13 +76,13 @@ for i = 1:length(dyn_systems_num_dem)
 %     [A, F] = bode(num, den, omega);
     subplot(2, 2, 2);
 %     plot(A, F);
-    bode(num, den, omega);
+    bode(num, den, omega);      % When plot directly, looks better
     title('Bode');
     
 %     [Re, Im] = nyquist(num, den);
     subplot(2, 2, [1, 3]);
 %     plot(Re(:), Im(:));
-    nyquist(num, den);
+    nyquist(num, den);          % When plot directly, looks better
     title('Nyquist');
     
     % Create a common title for all the subplots
@@ -111,13 +111,13 @@ plot(time_step, y_step, time_impulse, y_impulse);
 % [A, F] = bode(num, den, omega);
 subplot(2, 2, 2);
 % plot(A, F);
-bode(num, den, omega);
+bode(num, den, omega);  % When plot directly, looks better
 title('Bode');
 
 % [Re, Im] = nyquist(num, den);
 subplot(2, 2, [1, 3]);
 % plot(Re(:), Im(:));
-nyquist(num, den);
+nyquist(num, den);      % When plot directly, looks better
 title('Nyquist');
 
 % Create a common title for all the subplots
