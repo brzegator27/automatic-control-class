@@ -96,7 +96,7 @@ end;
 
 
 % inertial first order with delay
-% G(s) = e^(-s * theta) / (T * s + 1)
+% G(s) = k * e^(-s * theta) / (T * s + 1)
 num_iner = k;
 den_iner = [T, 1];
 [num_pade, den_pade] = pade(theta, 5);
