@@ -31,7 +31,7 @@ sys_with_c = series(sys, sys_c);
 
 K_sys_with_c = 4.0676;
 
-sys_with_c_K_c = series(tf(num * K_c, den), tf(num_c, den_c));
+sys_with_c_K_c = series(tf(num * K_sys_with_c, den), tf(num_c, den_c));
 sys_with_c_closed = feedback(sys_with_c_K_c, 1);
 hold on;
 step(sys_with_c_closed);
