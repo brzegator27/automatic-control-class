@@ -7,7 +7,7 @@ den = [0.2, 1.2, 1, 0];
 % sgrid;
 % [K, poles] = rlocfind(num, den);
 
-K = 0.4057;
+K = 0.4091;
 
 sys = tf(num * K, den);
 sys_closed = feedback(sys, 1);
